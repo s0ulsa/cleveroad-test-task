@@ -1,0 +1,35 @@
+.create-form {
+    width: 350px;
+    padding: 10px 35px 20px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .input-el-box {
+        display: flex;
+        flex-direction: column;
+        .field-box {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            input {
+                text-align: center;
+                border: none;
+                border-bottom: 1px solid grey;
+            }
+            label {
+                font-size: 18px;
+            }
+        }
+        .error {
+            color: red;
+            align-self: flex-start;
+            font-size: 10px;
+        }
+    }
+
+    .submit-field {
+        margin-top: 20px;
+        align-self: center;
+    }
+}

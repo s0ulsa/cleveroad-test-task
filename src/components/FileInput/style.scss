@@ -1,0 +1,10 @@
+.file-input-field {
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    .error {
+        padding-left: 20px;
+        font-size: 10px;
+        color: red;
+    }
+}

@@ -1,0 +1,13 @@
+.new-product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__form {
+        width: max-content;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

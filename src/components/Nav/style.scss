@@ -1,0 +1,11 @@
+.logout-box {
+    display: flex;
+    justify-content: center;
+    a {
+        margin: 30px;
+        padding-top: 50px;
+        text-decoration: none;
+        color: red;
+        cursor: pointer;
+    }
+}

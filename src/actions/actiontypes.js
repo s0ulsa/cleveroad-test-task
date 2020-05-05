@@ -1,0 +1,10 @@
+export const SET_LOGIN = "SET_LOGIN";
+export const LOG_IN = "LOG_IN";
+export const CLEAR_USER = "CLEAR_USER";
+export const SET_PRODUCTS = "SET_PRODUCTS";
+export const SET_URL = "SET_URL";
+export const SET_EDIT_PRODUCT = "SET_EDIT_PRODUCT";
+export const UPDATE_PRODUCT = "UPDATE_PRODUCT";
+export const CLEAR_UPDATE = "CLEAR_UPDATE";
+export const SET_CREATING = "SET_CREATING";
+export const CLEAR_CREATING = "CLEAR_CREATING";
