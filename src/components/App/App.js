@@ -36,7 +36,10 @@ const App = ({ setLogin }) => {
                     component={ProductCreator}
                     path={"/create"}
                 />
-                <Route exact path={"/edit"} component={EditComponent} />
+                <PrivateRoute 
+                    exact 
+                    component={EditComponent} 
+                    path={"/edit"} />
             </Switch>
         </Router>
     );
