@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./style.scss";
 import { storage } from "../../firebase";
-import { calculatePrice } from "../../actions/products";
+import { calculatePrice, isDiscountActive } from "../../actions/products";
 
 const ProductCard = (props) => {
     const [image, setImage] = useState();
@@ -30,19 +30,13 @@ const ProductCard = (props) => {
                     <p>{description}</p>
                 </div>
                 <div className="price-info">
-                    <span className="price">{`Цена 
-                    ${
-                        discount
-                            ? `со скидкой: ${calculatePrice(
-                                  price,
-                                  discount,
-                                  date
-                              )}`
-                            : `: ${price}`
-                    } $`}</span>
-                    {date ? (
-                        <p className="date">{`Дата окончания скидки: ${date}`}</p>
-                    ) : null}
+                    <p className="price">{`Цена ${price} $`}</p>
+                    {discount && isDiscountActive && (
+                        <p className="discount">{`Цена со скидкой: ${calculatePrice(
+                            price,
+                            discount
+                        )} $`}</p>
+                    )}
                 </div>
             </div>
             <button className="edit-btn" onClick={setEdit}>

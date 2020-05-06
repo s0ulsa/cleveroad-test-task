@@ -64,20 +64,19 @@ export const createProduct = (values, img, history) => {
     };
 };
 
-export const calculatePrice = (price, discount, date) => {
-    if (discount && Date.parse(date) >= Date.now()) {
-        return price - (price * discount) / 100;
-    }
-    return price;
+export const isDiscountActive = (date) =>
+    Date.parse(date) >= Date.now() ? true : false;
+
+export const calculatePrice = (price, discount) => {
+    return price - (price * discount) / 100;
 };
 
 export const updateProduct = (item) => {
-    console.log(item);
     return function (dispatch) {
         db.collection("items")
             .doc(item.id)
             .set({ ...item })
             .then(() => dispatch(clearUpdate()))
-            .catch((error) => console.log(error));
+            .catch((error) => alert(error));
     };
 };
