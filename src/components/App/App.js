@@ -19,7 +19,7 @@ const App = ({ setLogin }) => {
                 setLogin(user);
             }
         });
-    }, [setLogin]);
+    }, []);
 
     return (
         <Router>
